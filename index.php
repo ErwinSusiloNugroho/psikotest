@@ -12,10 +12,12 @@
     <header class="bg-white shadow-lg relative">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center">
+                <div class="flex items-center animate__animated animate__fadeInDown">
                     <i class="fas fa-brain text-3xl text-indigo-600 mr-3"></i>
                     <h1 class="text-2xl font-bold text-gray-800">Psikotest Burnout</h1>
                 </div>
+                <!-- Animate.css CDN -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
                 
                 <!-- Admin Login Button -->
                 <a href="admin-login.php" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-300 flex items-center">
@@ -29,10 +31,10 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-12">
         <!-- Hero Section -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 animate__animated animate__fadeInDown">
             <h2 class="text-5xl font-bold text-gray-800 mb-6">Selamat Datang</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Layanan Psikotest Burnout untuk membantu Anda mengenali tingkat kelelahan fisik, emosional, dan mental yang mungkin Anda alami
+            Layanan Psikotest Burnout untuk membantu Anda mengenali tingkat kelelahan fisik, emosional, dan mental yang mungkin Anda alami
             </p>
         </div>
 
@@ -57,16 +59,10 @@
                 <div class="bg-gradient-to-br from-indigo-50 to-purple-100 rounded-3xl p-8 shadow-lg mb-12">
                     <!-- Large Group Photo Container -->
                     <div class="text-center mb-8">
-                        <div class="relative mx-auto mb-6">
+                        <div class="relative mx-auto mb-6 group">
                             <!-- Placeholder for group photo - replace with actual image -->
-                            <div class="w-full max-w-4xl h-80 bg-gray-300 rounded-2xl mx-auto flex items-center justify-center overflow-hidden shadow-xl">
-                                <div class="text-center">
-                                    <i class="fas fa-users text-6xl text-gray-500 mb-4"></i>
-                                    <p class="text-gray-600 text-lg font-medium">Foto Bersama Kelompok</p>
-                                    <p class="text-gray-500 text-sm mt-2">Ganti dengan foto grup Anda</p>
-                                </div>
-                                <!-- Uncomment and replace with actual image -->
-                                <!-- <img src="path/to/group-photo.jpg" alt="Foto Bersama Kelompok" class="w-full h-full object-cover"> -->
+                            <div class="w-full max-w-4xl aspect-[16/7] bg-gray-300 rounded-2xl mx-auto flex items-center justify-center overflow-hidden shadow-xl transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1 group-hover:shadow-2xl">
+                                <img src="img/grub.jpeg" alt="Foto Bersama Kelompok" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
                             </div>
                         </div>
                     </div>
@@ -81,45 +77,45 @@
                         <!-- Member 1 -->
                         <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
+                                <img src="img/1.jpeg" alt="Anggota 1" class="w-full h-full object-cover">
                                 <!-- Ganti dengan foto: <img src="path/to/photo1.jpg" alt="Anggota 1" class="w-full h-full object-cover"> -->
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 1]</h6>
-                            <p class="text-indigo-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Via Noervaiza</h6>
+                            <p class="text-indigo-600 font-medium mb-2">(2320103037)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
                         
                         <!-- Member 2 -->
                         <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
+                                <img src="img/2.jpeg" alt="Anggota 2" class="w-full h-full object-cover">
                                 <!-- Ganti dengan foto: <img src="path/to/photo2.jpg" alt="Anggota 2" class="w-full h-full object-cover"> -->
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 2]</h6>
-                            <p class="text-purple-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Nur Rohmah K.W</h6>
+                            <p class="text-purple-600 font-medium mb-2">(2302103041)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
                         
                         <!-- Member 3 -->
                         <div class="bg-gradient-to-br from-green-50 to-teal-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
+                                <img src="img/3.jpeg " alt="Anggota 3" class="w-full h-full object-cover">
                                 <!-- Ganti dengan foto: <img src="path/to/photo3.jpg" alt="Anggota 3" class="w-full h-full object-cover"> -->
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 3]</h6>
-                            <p class="text-teal-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Bunga Kurnia P</h6>
+                            <p class="text-teal-600 font-medium mb-2">(2302103045)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
                         
                         <!-- Member 4 -->
                         <div class="bg-gradient-to-br from-orange-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
+                                <img src="img/4.jpeg" alt="Anggota 4" class="w-full h-full object-cover">
                                 <!-- Ganti dengan foto: <img src="path/to/photo4.jpg" alt="Anggota 4" class="w-full h-full object-cover"> -->
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 4]</h6>
-                            <p class="text-orange-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Revina Eka A.P</h6>
+                            <p class="text-orange-600 font-medium mb-2">(2302103005)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
                         
                         <!-- Member 5 -->
