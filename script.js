@@ -254,14 +254,10 @@ function showLoading(element, originalText) {
         element.disabled = false;
     };
 }
-// =====================================================
-// MAIN SCRIPT.JS - Test Platform JavaScript Functions
-// =====================================================
 
 // Fungsi untuk memulai test (redirect ke udashboard.html)
-function mulaiTest() {
+function mulaiTest(event) {
     const button = event.target;
-    const originalText = button.innerHTML;
     button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Memuat...';
     button.disabled = true;
     
