@@ -263,7 +263,7 @@ function mulaiTest(event) {
     
     // Redirect ke udashboard.html
     setTimeout(() => {
-        window.location.href = 'udashboard.html';
+        window.location.href = 'udasboard.html';
     }, 1500);
 }
 
