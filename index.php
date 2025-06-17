@@ -36,7 +36,7 @@
         <div class="text-center mb-16 animate__animated animate__fadeInDown">
             <h2 class="text-5xl font-bold text-gray-800 mb-6">Selamat Datang</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Layanan Psikotest Burnout untuk membantu Anda mengenali tingkat kelelahan fisik, emosional, dan mental yang mungkin Anda alami
+            Layanan Psikotest Burnout untuk membantu Anda memahami tingkat kelelahan fisik, emosional, dan mental yang sedang dialami.
             </p>
         </div>
 
@@ -80,7 +80,6 @@
                         <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
                                 <img src="img/1.jpeg" alt="Anggota 1" class="w-full h-full object-cover">
-                                <!-- Ganti dengan foto: <img src="path/to/photo1.jpg" alt="Anggota 1" class="w-full h-full object-cover"> -->
                             </div>
                             <h6 class="font-bold text-gray-800 text-lg mb-2">Via Noervaiza</h6>
                             <p class="text-indigo-600 font-medium mb-2">(2320103037)</p>
@@ -91,7 +90,6 @@
                         <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
                                 <img src="img/2.jpeg" alt="Anggota 2" class="w-full h-full object-cover">
-                                <!-- Ganti dengan foto: <img src="path/to/photo2.jpg" alt="Anggota 2" class="w-full h-full object-cover"> -->
                             </div>
                             <h6 class="font-bold text-gray-800 text-lg mb-2">Nur Rohmah K.W</h6>
                             <p class="text-purple-600 font-medium mb-2">(2302103041)</p>
@@ -102,7 +100,6 @@
                         <div class="bg-gradient-to-br from-green-50 to-teal-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
                                 <img src="img/3.jpeg " alt="Anggota 3" class="w-full h-full object-cover">
-                                <!-- Ganti dengan foto: <img src="path/to/photo3.jpg" alt="Anggota 3" class="w-full h-full object-cover"> -->
                             </div>
                             <h6 class="font-bold text-gray-800 text-lg mb-2">Bunga Kurnia P</h6>
                             <p class="text-teal-600 font-medium mb-2">(2302103045)</p>
@@ -113,7 +110,6 @@
                         <div class="bg-gradient-to-br from-orange-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
                                 <img src="img/4.jpeg" alt="Anggota 4" class="w-full h-full object-cover">
-                                <!-- Ganti dengan foto: <img src="path/to/photo4.jpg" alt="Anggota 4" class="w-full h-full object-cover"> -->
                             </div>
                             <h6 class="font-bold text-gray-800 text-lg mb-2">Revina Eka A.P</h6>
                             <p class="text-orange-600 font-medium mb-2">(2302103005)</p>
@@ -123,91 +119,81 @@
                         <!-- Member 5 -->
                         <div class="bg-gradient-to-br from-yellow-50 to-orange-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo5.jpg" alt="Anggota 5" class="w-full h-full object-cover"> -->
+                                <img src="img/5.jpeg" alt="Anggota 5" class="w-full h-full object-cover">
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 5]</h6>
-                            <p class="text-yellow-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Aynun Putria D.S</h6>
+                            <p class="text-yellow-600 font-medium mb-2">(2302103015)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
 
                         <!-- Member 6 -->
+                        <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                               <img src="img/6.jpeg" alt="Anggota 6" class="w-full h-full object-cover">
+                            </div>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Birgitta Ratna O</h6>
+                            <p class="text-pink-600 font-medium mb-2">(2302103020)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
+                        </div>
+                           
+                        <!-- member 7 -->
+                        <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="img/7.jpeg" alt="Anggota 7" class="w-full h-full object-cover">
+                            </div>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Eka Melinda</h6>
+                            <p class="text-pink-600 font-medium mb-2">(2302103024)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
+                        </div>
 
                         <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo6.jpg" alt="Anggota 6" class="w-full h-full object-cover"> -->
+                                <img src="img/8.jpeg" alt="Anggota 8" class="w-full h-full object-cover">
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 6]</h6>
-                            <p class="text-pink-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Egidia Parwina A</h6>
+                            <p class="text-red-600 font-medium mb-2">(2302103036)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
-
-                         <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo6.jpg" alt="Anggota 6" class="w-full h-full object-cover"> -->
+                                <img src="img/9.jpeg" alt="Anggota 9" class="w-full h-full object-cover">
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 7]</h6>
-                            <p class="text-pink-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Allin Rosmawandini </h6>
+                            <p class="text-pink-600 font-medium mb-2">(2302103007)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
-
-                         <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo6.jpg" alt="Anggota 6" class="w-full h-full object-cover"> -->
+                                <img src="img/10.jpeg" alt="Anggota 10" class="w-full h-full object-cover">
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 8]</h6>
-                            <p class="text-pink-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Rifqi Maulana F</h6>
+                            <p class="text-indigo-600 font-medium mb-2">(2302103026)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
-                         <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo6.jpg" alt="Anggota 6" class="w-full h-full object-cover"> -->
+                                <img src="img/11.jpeg" alt="Anggota 11" class="w-full h-full object-cover">
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 9]</h6>
-                            <p class="text-pink-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Arkhim Nur Ikhwanan K </h6>
+                            <p class="text-green-600 font-medium mb-2">(2302103001)</p>
+                            <p class="text-gray-600 text-sm">Prodi BK</p>
                         </div>
-                          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo1.jpg" alt="Anggota 1" class="w-full h-full object-cover"> -->
+                                <img src="img/12.jpeg" alt="Anggota 12" class="w-full h-full object-cover">
                             </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 10]</h6>
-                            <p class="text-indigo-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
+                            <h6 class="font-bold text-gray-800 text-lg mb-2">Rona Sabrina</h6>
+                            <p class="text-indigo-600 font-medium mb-2">(2402103069)</p>
+                            <p class="text-gray-600 text-sm">Podi RPL</p>
                         </div>
-                         <div class="bg-gradient-to-br from-pink-50 to-red-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo6.jpg" alt="Anggota 6" class="w-full h-full object-cover"> -->
-                            </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 11]</h6>
-                            <p class="text-pink-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
-                        </div>
-                         <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-4xl text-gray-500"></i>
-                                <!-- Ganti dengan foto: <img src="path/to/photo1.jpg" alt="Anggota 1" class="w-full h-full object-cover"> -->
-                            </div>
-                            <h6 class="font-bold text-gray-800 text-lg mb-2">[Nama Anggota 12]</h6>
-                            <p class="text-indigo-600 font-medium mb-2">[NIM/NPM]</p>
-                            <p class="text-gray-600 text-sm">[Peran/Posisi]</p>
-                        </div>
-
+                    </div>
                 </div>
                 
                 <!-- Project Description -->
                 <div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
                     <h5 class="text-xl font-bold text-gray-800 mb-4 text-center">Tentang Proyek Ini</h5>
                     <p class="text-gray-700 text-center leading-relaxed">
-                        Proyek Psikotest Burnout ini dikembangkan sebagai bagian dari tugas mata kuliah 
-                        Program Studi Bimbingan dan Konseling Universitas PGRI Madiun. Aplikasi ini bertujuan 
-                        untuk membantu individu mengenali tingkat burnout yang mereka alami
+                        Proyek Psikotest Burnout ini dikembangkan sebagai bagian dari tugas pada Program Studi Bimbingan dan Konseling Universitas PGRI Madiun. Aplikasi ini bertujuan untuk membantu individu mengenali tingkat burnout yang sedang dialami.
                     </p>
                 </div>
             </div>
@@ -218,8 +204,7 @@
             <div class="mb-8">
                 <h3 class="text-3xl font-bold text-gray-800 mb-4">Siap Memulai Tes?</h3>
                 <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Kenali kondisi mental Anda dengan tes burnout yang telah dirancang khusus. 
-                    Tes ini akan membantu Anda memahami tingkat kelelahan yang Anda alami.
+                    Kenali kondisi mental Anda melalui tes burnout yang telah kami rancang. Tes ini akan membantu Anda memahami tingkat kelelahan yang sedang dialami.
                 </p>
             </div>
             
@@ -227,7 +212,7 @@
             <a href="Udasboard.html" 
                class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 mb-6">
                 <i class="fas fa-clipboard-check mr-4"></i>
-                Mulai Sesi Test
+                Mulai Tes Sekarang
             </a>
             
             <div class="flex items-center justify-center text-gray-500 text-sm">
@@ -238,7 +223,7 @@
                 <span>15 pertanyaan</span>
                 <span class="mx-3">•</span>
                 <i class="fas fa-shield-alt mr-2"></i>
-                <span>Privasi terjamin</span>
+                <span>Privasi Anda terjaga</span>
             </div>
         </div>
 
@@ -249,7 +234,7 @@
                     <i class="fas fa-user-check text-2xl text-indigo-600"></i>
                 </div>
                 <h4 class="font-bold text-gray-800 mb-2">Mudah Digunakan</h4>
-                <p class="text-gray-600 text-sm">Interface yang sederhana dan mudah dipahami oleh semua kalangan</p>
+                <p class="text-gray-600 text-sm">Tampilan sederhana dan mudah dipahami oleh semua kalangan.</p>
             </div>
             
             <div class="text-center">
@@ -257,7 +242,7 @@
                     <i class="fas fa-chart-line text-2xl text-purple-600"></i>
                 </div>
                 <h4 class="font-bold text-gray-800 mb-2">Hasil Akurat</h4>
-                <p class="text-gray-600 text-sm">Berdasarkan standar psikologi yang telah teruji dan valid</p>
+                <p class="text-gray-600 text-sm">Berdasarkan standar psikologi yang telah teruji dan valid.</p>
             </div>
             
             <div class="text-center">
@@ -265,7 +250,7 @@
                     <i class="fas fa-lightbulb text-2xl text-yellow-600"></i>
                 </div>
                 <h4 class="font-bold text-gray-800 mb-2">Saran Praktis</h4>
-                <p class="text-gray-600 text-sm">Mendapatkan rekomendasi dan saran untuk mengatasi burnout</p>
+                <p class="text-gray-600 text-sm">Dapatkan rekomendasi dan tips untuk mengatasi burnout.</p>
             </div>
         </div>
     </main>
