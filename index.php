@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psikotest Burnout - Prodi BK Unipma</title>
     <script src="https://cdn.tailwindcss.com"></script>
+     <script src="script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -268,5 +269,6 @@
             </p>
         </div>
     </footer>
+
 </body>
 </html>

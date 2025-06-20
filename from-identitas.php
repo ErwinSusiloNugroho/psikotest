@@ -268,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
                         >
                             <i class="fas fa-arrow-right mr-3"></i>
-                            Lanjut ke Soal Psikotes
+                            Yuk Kroscek Tingkat Burnout Kamu!
                         </button>
                     </div>
                 </form>
