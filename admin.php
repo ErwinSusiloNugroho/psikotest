@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Hasil Peserta</title>
+    <title>Dashboard Hasil Peserta - Psikotest Burnout</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-gray-50">
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
     <!-- Header -->
-    <header class="bg-white shadow-sm border-b">
+    <header class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-6">
                 <div class="flex items-center">
-                    <i class="fas fa-chart-line text-2xl text-blue-600 mr-3"></i>
+                    <i class="fas fa-brain text-3xl text-indigo-600 mr-3"></i>
                     <div>
-                        <h1 class="text-2xl font-bold text-gray-900">Dashboard Hasil Peserta</h1>
+                        <h1 class="text-2xl font-bold text-gray-900">Dashboard Admin</h1>
                         <p class="text-sm text-gray-600">Psikotest Burnout</p>
                     </div>
                 </div>
@@ -36,10 +36,10 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Summary Cards -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white rounded-lg p-6 shadow-sm border">
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-indigo-100">
                 <div class="flex items-center">
-                    <div class="p-3 rounded-full bg-blue-100">
-                        <i class="fas fa-users text-blue-600"></i>
+                    <div class="p-3 rounded-full bg-indigo-100">
+                        <i class="fas fa-users text-indigo-600"></i>
                     </div>
                     <div class="ml-4">
                         <p class="text-sm font-medium text-gray-600">Total Peserta</p>
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg p-6 shadow-sm border">
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-green-100">
                 <div class="flex items-center">
                     <div class="p-3 rounded-full bg-green-100">
                         <i class="fas fa-smile text-green-600"></i>
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg p-6 shadow-sm border">
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-yellow-100">
                 <div class="flex items-center">
                     <div class="p-3 rounded-full bg-yellow-100">
                         <i class="fas fa-meh text-yellow-600"></i>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg p-6 shadow-sm border">
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-red-100">
                 <div class="flex items-center">
                     <div class="p-3 rounded-full bg-red-100">
                         <i class="fas fa-frown text-red-600"></i>
@@ -86,20 +86,27 @@
         </div>
 
         <!-- Filter and Search -->
-        <div class="bg-white rounded-lg shadow-sm border mb-6">
-            <div class="p-6 border-b">
+        <div class="bg-white rounded-xl shadow-lg border border-gray-100 mb-6">
+            <div class="p-6 border-b border-gray-100">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div class="flex items-center space-x-4">
                         <div>
                             <input type="text" id="search-input" placeholder="Cari nama peserta..." 
-                                   class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                   class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                         </div>
                         <div>
-                            <select id="filter-category" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <select id="filter-category" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                                 <option value="">Semua Kategori</option>
                                 <option value="Rendah">Burnout Rendah</option>
                                 <option value="Sedang">Burnout Sedang</option>
                                 <option value="Tinggi">Burnout Tinggi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="filter-gender" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                <option value="">Semua Jenis Kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
                             </select>
                         </div>
                     </div>
@@ -107,7 +114,7 @@
                         <button onclick="exportData()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                             <i class="fas fa-download mr-2"></i>Export
                         </button>
-                        <button onclick="refreshData()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <button onclick="refreshData()" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                             <i class="fas fa-sync-alt mr-2"></i>Refresh
                         </button>
                     </div>
@@ -116,8 +123,8 @@
         </div>
 
         <!-- Results Table -->
-        <div class="bg-white rounded-lg shadow-sm border">
-            <div class="p-6 border-b">
+        <div class="bg-white rounded-xl shadow-lg border border-gray-100">
+            <div class="p-6 border-b border-gray-100">
                 <h2 class="text-lg font-semibold text-gray-900">Hasil Tes Peserta</h2>
             </div>
             <div class="overflow-x-auto">
@@ -126,7 +133,9 @@
                         <tr>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">No</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama Peserta</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Jenis Kelamin</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Usia</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pekerjaan</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Skor</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kategori</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tanggal Tes</th>
@@ -140,12 +149,12 @@
             </div>
             
             <!-- Pagination -->
-            <div class="bg-white px-4 py-3 flex items-center justify-between border-t sm:px-6">
+            <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-100 sm:px-6">
                 <div class="flex-1 flex justify-between sm:hidden">
-                    <button class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                    <button onclick="changePage(currentPage - 1)" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
                         Previous
                     </button>
-                    <button class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                    <button onclick="changePage(currentPage + 1)" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
                         Next
                     </button>
                 </div>
@@ -168,8 +177,8 @@
 
     <!-- Detail Modal -->
     <div id="detail-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center z-50">
-        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4">
-            <div class="p-6 border-b">
+        <div class="bg-white rounded-xl shadow-xl max-w-4xl w-full mx-4">
+            <div class="p-6 border-b border-gray-100">
                 <div class="flex items-center justify-between">
                     <h3 class="text-lg font-semibold text-gray-900">Detail Hasil Tes</h3>
                     <button onclick="closeDetailModal()" class="text-gray-400 hover:text-gray-600">
@@ -182,7 +191,7 @@
                     <!-- Detail content akan dimuat di sini -->
                 </div>
             </div>
-            <div class="p-6 border-t bg-gray-50 flex justify-end">
+            <div class="p-6 border-t border-gray-100 bg-gray-50 flex justify-end">
                 <button onclick="closeDetailModal()" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors">
                     Tutup
                 </button>
@@ -191,18 +200,128 @@
     </div>
 
     <script>
-        // Sample data
+        // Sample data disesuaikan dengan struktur form_identitas.php
         let participantsData = [
-            { id: 1, name: "Ahmad Rizki", email: "ahmad.rizki@email.com", score: 42, category: "Rendah", date: "2024-06-15", details: { emotional: 15, depersonalization: 12, achievement: 15 } },
-            { id: 2, name: "Siti Nurhaliza", email: "siti.nur@email.com", score: 68, category: "Sedang", date: "2024-06-14", details: { emotional: 25, depersonalization: 20, achievement: 23 } },
-            { id: 3, name: "Budi Santoso", email: "budi.santoso@email.com", score: 89, category: "Tinggi", date: "2024-06-13", details: { emotional: 32, depersonalization: 28, achievement: 29 } },
-            { id: 4, name: "Maya Sari", email: "maya.sari@email.com", score: 35, category: "Rendah", date: "2024-06-12", details: { emotional: 12, depersonalization: 10, achievement: 13 } },
-            { id: 5, name: "Joko Widodo", email: "joko.w@email.com", score: 75, category: "Sedang", date: "2024-06-11", details: { emotional: 27, depersonalization: 23, achievement: 25 } },
-            { id: 6, name: "Indira Kenz", email: "indira.k@email.com", score: 92, category: "Tinggi", date: "2024-06-10", details: { emotional: 35, depersonalization: 30, achievement: 27 } },
-            { id: 7, name: "Rudi Tabuti", email: "rudi.t@email.com", score: 38, category: "Rendah", date: "2024-06-09", details: { emotional: 13, depersonalization: 12, achievement: 13 } },
-            { id: 8, name: "Lisa Blackpink", email: "lisa.bp@email.com", score: 71, category: "Sedang", date: "2024-06-08", details: { emotional: 26, depersonalization: 22, achievement: 23 } },
-            { id: 9, name: "Andi Malarangeng", email: "andi.m@email.com", score: 85, category: "Tinggi", date: "2024-06-07", details: { emotional: 30, depersonalization: 27, achievement: 28 } },
-            { id: 10, name: "Dewi Persik", email: "dewi.p@email.com", score: 41, category: "Rendah", date: "2024-06-06", details: { emotional: 14, depersonalization: 13, achievement: 14 } }
+            { 
+                id: 1, 
+                nama: "Ahmad Rizki Pratama", 
+                jenis_kelamin: "Laki-laki", 
+                usia: 28, 
+                pekerjaan: "Software Developer", 
+                pendidikan: "S1",
+                score: 42, 
+                category: "Rendah", 
+                date: "2024-06-15", 
+                details: { emotional: 15, depersonalization: 12, achievement: 15 } 
+            },
+            { 
+                id: 2, 
+                nama: "Siti Nurhaliza", 
+                jenis_kelamin: "Perempuan", 
+                usia: 32, 
+                pekerjaan: "Guru SD", 
+                pendidikan: "S1",
+                score: 68, 
+                category: "Sedang", 
+                date: "2024-06-14", 
+                details: { emotional: 25, depersonalization: 20, achievement: 23 } 
+            },
+            { 
+                id: 3, 
+                nama: "Budi Santoso", 
+                jenis_kelamin: "Laki-laki", 
+                usia: 45, 
+                pekerjaan: "Manager", 
+                pendidikan: "S2",
+                score: 89, 
+                category: "Tinggi", 
+                date: "2024-06-13", 
+                details: { emotional: 32, depersonalization: 28, achievement: 29 } 
+            },
+            { 
+                id: 4, 
+                nama: "Maya Sari Dewi", 
+                jenis_kelamin: "Perempuan", 
+                usia: 24, 
+                pekerjaan: "Mahasiswa", 
+                pendidikan: "SMA",
+                score: 35, 
+                category: "Rendah", 
+                date: "2024-06-12", 
+                details: { emotional: 12, depersonalization: 10, achievement: 13 } 
+            },
+            { 
+                id: 5, 
+                nama: "Joko Susilo", 
+                jenis_kelamin: "Laki-laki", 
+                usia: 38, 
+                pekerjaan: "Dokter", 
+                pendidikan: "S1",
+                score: 75, 
+                category: "Sedang", 
+                date: "2024-06-11", 
+                details: { emotional: 27, depersonalization: 23, achievement: 25 } 
+            },
+            { 
+                id: 6, 
+                nama: "Indira Kusuma", 
+                jenis_kelamin: "Perempuan", 
+                usia: 29, 
+                pekerjaan: "Marketing", 
+                pendidikan: "D3",
+                score: 92, 
+                category: "Tinggi", 
+                date: "2024-06-10", 
+                details: { emotional: 35, depersonalization: 30, achievement: 27 } 
+            },
+            { 
+                id: 7, 
+                nama: "Rudi Tabuti", 
+                jenis_kelamin: "Laki-laki", 
+                usia: 33, 
+                pekerjaan: "Karyawan Swasta", 
+                pendidikan: "SMA",
+                score: 38, 
+                category: "Rendah", 
+                date: "2024-06-09", 
+                details: { emotional: 13, depersonalization: 12, achievement: 13 } 
+            },
+            { 
+                id: 8, 
+                nama: "Lisa Anggraini", 
+                jenis_kelamin: "Perempuan", 
+                usia: 26, 
+                pekerjaan: "Perawat", 
+                pendidikan: "D3",
+                score: 71, 
+                category: "Sedang", 
+                date: "2024-06-08", 
+                details: { emotional: 26, depersonalization: 22, achievement: 23 } 
+            },
+            { 
+                id: 9, 
+                nama: "Andi Maulana", 
+                jenis_kelamin: "Laki-laki", 
+                usia: 41, 
+                pekerjaan: "PNS", 
+                pendidikan: "S1",
+                score: 85, 
+                category: "Tinggi", 
+                date: "2024-06-07", 
+                details: { emotional: 30, depersonalization: 27, achievement: 28 } 
+            },
+            { 
+                id: 10, 
+                nama: "Dewi Puspita", 
+                jenis_kelamin: "Perempuan", 
+                usia: 35, 
+                pekerjaan: "Wiraswasta", 
+                pendidikan: "SMA",
+                score: 41, 
+                category: "Rendah", 
+                date: "2024-06-06", 
+                details: { emotional: 14, depersonalization: 13, achievement: 14 } 
+            }
         ];
 
         let filteredData = [...participantsData];
@@ -257,13 +376,20 @@
             tbody.innerHTML = pageData.map((participant, index) => `
                 <tr class="hover:bg-gray-50">
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${startIndex + index + 1}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${participant.name}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${participant.email}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${participant.nama}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <span class="inline-flex items-center">
+                            <i class="fas fa-${participant.jenis_kelamin === 'Laki-laki' ? 'mars' : 'venus'} mr-1 text-${participant.jenis_kelamin === 'Laki-laki' ? 'blue' : 'pink'}-500"></i>
+                            ${participant.jenis_kelamin}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${participant.usia} tahun</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${participant.pekerjaan}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold">${participant.score}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm">${getCategoryBadge(participant.category)}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(participant.date).toLocaleDateString('id-ID')}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <button onclick="showDetail(${participant.id})" class="text-blue-600 hover:text-blue-900 mr-3">
+                        <button onclick="showDetail(${participant.id})" class="text-indigo-600 hover:text-indigo-900 mr-3">
                             <i class="fas fa-eye mr-1"></i>Detail
                         </button>
                     </td>
@@ -286,31 +412,34 @@
         function setupEventListeners() {
             // Search
             document.getElementById('search-input').addEventListener('input', function(e) {
-                const searchTerm = e.target.value.toLowerCase();
-                filteredData = participantsData.filter(p => 
-                    p.name.toLowerCase().includes(searchTerm) || 
-                    p.email.toLowerCase().includes(searchTerm)
-                );
-                applyFilter();
+                applyFilters();
             });
 
-            // Filter
+            // Filter by category
             document.getElementById('filter-category').addEventListener('change', function(e) {
-                const category = e.target.value;
-                if (category) {
-                    filteredData = filteredData.filter(p => p.category === category);
-                }
-                currentPage = 1;
-                updateSummaryCards();
-                renderTable();
+                applyFilters();
+            });
+
+            // Filter by gender
+            document.getElementById('filter-gender').addEventListener('change', function(e) {
+                applyFilters();
             });
         }
 
-        function applyFilter() {
+        function applyFilters() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
             const category = document.getElementById('filter-category').value;
-            if (category) {
-                filteredData = filteredData.filter(p => p.category === category);
-            }
+            const gender = document.getElementById('filter-gender').value;
+
+            filteredData = participantsData.filter(p => {
+                const matchesSearch = p.nama.toLowerCase().includes(searchTerm) || 
+                                    p.pekerjaan.toLowerCase().includes(searchTerm);
+                const matchesCategory = !category || p.category === category;
+                const matchesGender = !gender || p.jenis_kelamin === gender;
+                
+                return matchesSearch && matchesCategory && matchesGender;
+            });
+
             currentPage = 1;
             updateSummaryCards();
             renderTable();
@@ -325,35 +454,52 @@
                 <div class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h4 class="font-semibold text-gray-900 mb-3">Informasi Peserta</h4>
-                            <div class="space-y-2">
-                                <p><span class="font-medium">Nama:</span> ${participant.name}</p>
-                                <p><span class="font-medium">Email:</span> ${participant.email}</p>
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-user mr-2 text-indigo-600"></i>
+                                Informasi Peserta
+                            </h4>
+                            <div class="space-y-2 bg-gray-50 p-4 rounded-lg">
+                                <p><span class="font-medium">Nama:</span> ${participant.nama}</p>
+                                <p><span class="font-medium">Jenis Kelamin:</span> 
+                                    <i class="fas fa-${participant.jenis_kelamin === 'Laki-laki' ? 'mars' : 'venus'} mr-1 text-${participant.jenis_kelamin === 'Laki-laki' ? 'blue' : 'pink'}-500"></i>
+                                    ${participant.jenis_kelamin}
+                                </p>
+                                <p><span class="font-medium">Usia:</span> ${participant.usia} tahun</p>
+                                <p><span class="font-medium">Pekerjaan:</span> ${participant.pekerjaan}</p>
+                                <p><span class="font-medium">Pendidikan:</span> ${participant.pendidikan}</p>
                                 <p><span class="font-medium">Tanggal Tes:</span> ${new Date(participant.date).toLocaleDateString('id-ID')}</p>
                             </div>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-gray-900 mb-3">Hasil Tes</h4>
-                            <div class="space-y-2">
-                                <p><span class="font-medium">Skor Total:</span> ${participant.score}</p>
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                                <i class="fas fa-chart-bar mr-2 text-indigo-600"></i>
+                                Hasil Tes
+                            </h4>
+                            <div class="space-y-2 bg-gray-50 p-4 rounded-lg">
+                                <p><span class="font-medium">Skor Total:</span> 
+                                    <span class="text-xl font-bold text-indigo-600">${participant.score}</span>
+                                </p>
                                 <p><span class="font-medium">Kategori:</span> ${getCategoryBadge(participant.category)}</p>
                             </div>
                         </div>
                     </div>
                     
                     <div>
-                        <h4 class="font-semibold text-gray-900 mb-3">Detail Skor per Dimensi</h4>
+                        <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-chart-pie mr-2 text-indigo-600"></i>
+                            Detail Skor per Dimensi
+                        </h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <p class="text-sm text-blue-600 font-medium">Kelelahan Emosional</p>
+                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg border border-blue-200">
+                                <p class="text-sm text-blue-700 font-medium mb-1">Kelelahan Emosional</p>
                                 <p class="text-2xl font-bold text-blue-800">${participant.details.emotional}</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
-                                <p class="text-sm text-purple-600 font-medium">Depersonalisasi</p>
+                            <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg border border-purple-200">
+                                <p class="text-sm text-purple-700 font-medium mb-1">Depersonalisasi</p>
                                 <p class="text-2xl font-bold text-purple-800">${participant.details.depersonalization}</p>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg">
-                                <p class="text-sm text-green-600 font-medium">Pencapaian Pribadi</p>
+                            <div class="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg border border-green-200">
+                                <p class="text-sm text-green-700 font-medium mb-1">Pencapaian Pribadi</p>
                                 <p class="text-2xl font-bold text-green-800">${participant.details.achievement}</p>
                             </div>
                         </div>
@@ -371,17 +517,26 @@
         }
 
         function exportData() {
-            // Simulate export
             const csv = [
-                ['No', 'Nama', 'Email', 'Skor', 'Kategori', 'Tanggal'],
-                ...filteredData.map((p, i) => [i+1, p.name, p.email, p.score, p.category, p.date])
+                ['No', 'Nama', 'Jenis Kelamin', 'Usia', 'Pekerjaan', 'Pendidikan', 'Skor', 'Kategori', 'Tanggal'],
+                ...filteredData.map((p, i) => [
+                    i+1, 
+                    p.nama, 
+                    p.jenis_kelamin, 
+                    p.usia, 
+                    p.pekerjaan, 
+                    p.pendidikan, 
+                    p.score, 
+                    p.category, 
+                    p.date
+                ])
             ].map(row => row.join(',')).join('\n');
 
-            const blob = new Blob([csv], { type: 'text/csv' });
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'hasil-peserta.csv';
+            a.download = 'hasil-peserta-burnout.csv';
             a.click();
             window.URL.revokeObjectURL(url);
         }
@@ -390,20 +545,25 @@
             // Reset filters
             document.getElementById('search-input').value = '';
             document.getElementById('filter-category').value = '';
+            document.getElementById('filter-gender').value = '';
             filteredData = [...participantsData];
             currentPage = 1;
             updateSummaryCards();
             renderTable();
         }
 
+        function changePage(page) {
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+            if (page >= 1 && page <= totalPages) {
+                currentPage = page;
+                renderTable();
+            }
+        }
+
         function logout() {
             if (confirm('Apakah Anda yakin ingin logout?')) {
-                // Hapus session/token jika ada
-                localStorage.removeItem('admin_token');
-                sessionStorage.clear();
-                
                 // Redirect ke halaman login atau beranda
-                window.location.href = 'index.php'; // Ganti dengan URL login page Anda
+                window.location.href = 'form_identitas.php';
             }
         }
     </script>
