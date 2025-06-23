@@ -16,7 +16,7 @@
                     <i class="fas fa-brain text-3xl text-indigo-600 mr-3"></i>
                     <div>
                         <h1 class="text-2xl font-bold text-gray-900">Dashboard Admin</h1>
-                        <p class="text-sm text-gray-600">Psikotest Burnout</p>
+                        <p class="text-sm text-gray-600">Burnout_id</p>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">

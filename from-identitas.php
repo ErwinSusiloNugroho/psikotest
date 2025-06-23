@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Identitas - Psikotest Burnout</title>
+    <title>Identitas - Burnout_id</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
                     <i class="fas fa-brain text-3xl text-indigo-600 mr-3"></i>
-                    <h1 class="text-2xl font-bold text-gray-800">Psikotest Burnout</h1>
+                    <h1 class="text-2xl font-bold text-gray-800">Burnout_id</h1>
                 </div>
                 <div class="flex items-center text-sm text-gray-600">
                     <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full font-medium">

@@ -23,7 +23,7 @@
                 <div class="flex items-center animate__animated animate__fadeInDown">
                     <i class="fas fa-brain text-3xl text-indigo-600 mr-3"></i>
                     <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-indigo-700 transition-colors duration-200">
-                        Psikotest Burnout
+                        Burnout_id
                     </a>
                 </div>
                 
