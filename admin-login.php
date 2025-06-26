@@ -172,31 +172,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Demo Credentials Info -->
-            <div class="mt-6 bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg animate__animated animate__fadeInUp animate__delay-1s">
-                <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
-                    <i class="fas fa-info-circle mr-2 text-blue-600"></i>
-                    Demo Credentials
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                    <div class="bg-blue-50 p-3 rounded-lg">
-                        <p class="font-medium text-blue-800">Super Admin</p>
-                        <p class="text-blue-600">Username: <code class="bg-blue-100 px-1 rounded">admin</code></p>
-                        <p class="text-blue-600">Password: <code class="bg-blue-100 px-1 rounded">admin123</code></p>
-                    </div>
-                    <div class="bg-purple-50 p-3 rounded-lg">
-                        <p class="font-medium text-purple-800">Moderator</p>
-                        <p class="text-purple-600">Username: <code class="bg-purple-100 px-1 rounded">moderator</code></p>
-                        <p class="text-purple-600">Password: <code class="bg-purple-100 px-1 rounded">mod123</code></p>
-                    </div>
-                </div>
-                <p class="text-xs text-gray-500 mt-3 text-center">
-                    <i class="fas fa-exclamation-triangle mr-1"></i>
-                    Gunakan kredensial ini hanya untuk demo
-                </p>
-            </div>
         </div>
+            
     </main>
 
     <!-- Footer -->
