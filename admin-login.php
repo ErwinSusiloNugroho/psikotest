@@ -27,7 +27,7 @@
                     </a>
                 </div>
                 
-                <a href="index.html" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-300 flex items-center">
+                <a href="index.php" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-300 flex items-center">
                     <i class="fas fa-home mr-2"></i>
                     Kembali ke Beranda
                 </a>
