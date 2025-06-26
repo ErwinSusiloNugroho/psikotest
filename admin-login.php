@@ -112,11 +112,6 @@
                                     Ingat saya
                                 </label>
                             </div>
-                            <div class="text-sm">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500 transition-colors duration-200">
-                                    Lupa password?
-                                </a>
-                            </div>
                         </div>
 
                         <!-- Error Message -->
