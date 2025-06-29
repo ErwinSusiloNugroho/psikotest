@@ -563,7 +563,7 @@
         function logout() {
             if (confirm('Apakah Anda yakin ingin logout?')) {
                 // Redirect ke halaman login atau beranda
-                window.location.href = 'index.php';
+                window.location.href = 'index.html';
             }
         }
     </script>
