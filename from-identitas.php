@@ -2,20 +2,21 @@
 session_start();
 require_once 'config.php';
 
+$errors = [];
+$success = false;
+
 // Proses form jika ada data POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         // Validasi input
-        $nama = trim($_POST['nama']);
-        $jenis_kelamin = $_POST['jenis_kelamin'];
-        $usia = (int)$_POST['usia'];
-        $pekerjaan = trim($_POST['pekerjaan']);
-        $pendidikan = $_POST['pendidikan'];
+        $nama = trim($_POST['nama'] ?? '');
+        $jenis_kelamin = $_POST['jenis_kelamin'] ?? '';
+        $usia = (int)($_POST['usia'] ?? 0);
+        $pekerjaan = trim($_POST['pekerjaan'] ?? '');
+        $pendidikan = $_POST['pendidikan'] ?? '';
         $agreement = isset($_POST['agreement']) ? 1 : 0;
         
         // Validasi data
-        $errors = [];
-        
         if (empty($nama)) {
             $errors[] = "Nama lengkap harus diisi";
         }
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         // Jika tidak ada error, simpan ke database
         if (empty($errors)) {
-            // Insert data ke tabel peserta (tidak perlu CREATE TABLE lagi)
+            // Insert data ke tabel peserta
             $sql = "INSERT INTO peserta (nama, jenis_kelamin, usia, pekerjaan, pendidikan) 
                     VALUES (:nama, :jenis_kelamin, :usia, :pekerjaan, :pendidikan)";
             
@@ -129,6 +130,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </p>
             </div>
 
+            <!-- Error Messages -->
+            <?php if (!empty($errors)): ?>
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                <div class="flex items-start">
+                    <i class="fas fa-exclamation-circle text-red-600 mr-3 mt-1"></i>
+                    <div>
+                        <h4 class="font-semibold text-red-800 mb-2">Terjadi Kesalahan:</h4>
+                        <ul class="text-red-700 text-sm space-y-1">
+                            <?php foreach ($errors as $error): ?>
+                                <li>• <?php echo htmlspecialchars($error); ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
             <!-- Form Card -->
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
                 <div class="bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-6">
@@ -138,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </h3>
                 </div>
 
-                <form id="identitasForm" class="px-8 py-8 space-y-6">
+                <form method="POST" class="px-8 py-8 space-y-6">
                     <!-- Nama Lengkap -->
                     <div>
                         <label for="nama" class="block text-sm font-semibold text-gray-700 mb-2">
@@ -150,6 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             id="nama" 
                             name="nama" 
                             required
+                            value="<?php echo htmlspecialchars($_POST['nama'] ?? ''); ?>"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
                             placeholder="Masukkan nama lengkap Anda"
                         >
@@ -163,14 +182,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </label>
                         <div class="flex space-x-6">
                             <label class="flex items-center cursor-pointer">
-                                <input type="radio" name="jenis_kelamin" value="Laki-laki" required class="sr-only">
-                                <div class="radio-custom mr-3"></div>
-                                <span class="text-gray-700">Laki-laki</span>
+                                <input type="radio" name="jenis_kelamin" value="Laki-laki" required 
+                                       <?php echo (($_POST['jenis_kelamin'] ?? '') === 'Laki-laki') ? 'checked' : ''; ?>
+                                       class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <span class="ml-3 text-gray-700">Laki-laki</span>
                             </label>
                             <label class="flex items-center cursor-pointer">
-                                <input type="radio" name="jenis_kelamin" value="Perempuan" required class="sr-only">
-                                <div class="radio-custom mr-3"></div>
-                                <span class="text-gray-700">Perempuan</span>
+                                <input type="radio" name="jenis_kelamin" value="Perempuan" required 
+                                       <?php echo (($_POST['jenis_kelamin'] ?? '') === 'Perempuan') ? 'checked' : ''; ?>
+                                       class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <span class="ml-3 text-gray-700">Perempuan</span>
                             </label>
                         </div>
                     </div>
@@ -188,6 +209,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             required
                             min="15" 
                             max="70"
+                            value="<?php echo htmlspecialchars($_POST['usia'] ?? ''); ?>"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
                             placeholder="Masukkan usia Anda"
                         >
@@ -204,6 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             id="pekerjaan" 
                             name="pekerjaan" 
                             required
+                            value="<?php echo htmlspecialchars($_POST['pekerjaan'] ?? ''); ?>"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
                             placeholder="Contoh: Guru, Dokter, Karyawan Swasta, Mahasiswa"
                         >
@@ -222,13 +245,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
                         >
                             <option value="">Pilih pendidikan terakhir</option>
-                            <option value="SD">SD/Sederajat</option>
-                            <option value="SMP">SMP/Sederajat</option>
-                            <option value="SMA">SMA/SMK/Sederajat</option>
-                            <option value="D3">Diploma 3 (D3)</option>
-                            <option value="S1">Sarjana (S1)</option>
-                            <option value="S2">Magister (S2)</option>
-                            <option value="S3">Doktor (S3)</option>
+                            <option value="SD" <?php echo (($_POST['pendidikan'] ?? '') === 'SD') ? 'selected' : ''; ?>>SD/Sederajat</option>
+                            <option value="SMP" <?php echo (($_POST['pendidikan'] ?? '') === 'SMP') ? 'selected' : ''; ?>>SMP/Sederajat</option>
+                            <option value="SMA" <?php echo (($_POST['pendidikan'] ?? '') === 'SMA') ? 'selected' : ''; ?>>SMA/SMK/Sederajat</option>
+                            <option value="D3" <?php echo (($_POST['pendidikan'] ?? '') === 'D3') ? 'selected' : ''; ?>>Diploma 3 (D3)</option>
+                            <option value="S1" <?php echo (($_POST['pendidikan'] ?? '') === 'S1') ? 'selected' : ''; ?>>Sarjana (S1)</option>
+                            <option value="S2" <?php echo (($_POST['pendidikan'] ?? '') === 'S2') ? 'selected' : ''; ?>>Magister (S2)</option>
+                            <option value="S3" <?php echo (($_POST['pendidikan'] ?? '') === 'S3') ? 'selected' : ''; ?>>Doktor (S3)</option>
                         </select>
                     </div>
 
@@ -253,6 +276,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             id="agreement" 
                             name="agreement" 
                             required
+                            <?php echo isset($_POST['agreement']) ? 'checked' : ''; ?>
                             class="mt-1 mr-3 w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                         >
                         <label for="agreement" class="text-sm text-gray-700">
@@ -303,8 +327,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </p>
         </div>
     </footer>
-    <script>
-    src="script.js"
-  </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
